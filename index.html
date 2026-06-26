@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tier List - Gabriel e Anne</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page">
+        <h1>Tier List para Gabriel e Anne</h1>
+
+        <section class="upload-panel">
+            <label class="upload-btn">
+                <input type="file" id="imageInput" accept="image/*" multiple>
+                Adicionar imagens
+            </label>
+            <div class="action-buttons">
+                <button id="saveStateButton" type="button" class="action-btn">Salvar Tierlist</button>
+                <button id="loadStateButton" type="button" class="action-btn">Carregar Tierlist</button>
+                <input type="file" id="stateInput" accept="application/json" hidden>
+            </div>
+        </section>
+
+        <section class="source-zone">
+            <div class="source-container">
+                <div class="source-person">
+                    <h2>Imagens - Gabriel</h2>
+                    <div id="availableImagesGabriel" class="image-grid"></div>
+                </div>
+                <div class="source-person">
+                    <h2>Imagens - Anne</h2>
+                    <div id="availableImagesAnne" class="image-grid"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="tier-list">
+            <div class="person-card">
+                <h2>Gabriel</h2>
+                <div class="tier-row" data-person="gabriel" data-tier="10">
+                    <div class="tier-label">10</div>
+                    <div class="tier-items"></div>
+                </div>
+                <div class="tier-row" data-person="gabriel" data-tier="9">
+                    <div class="tier-label">9</div>
+                    <div class="tier-items"></div>
+                </div>
+                <div class="tier-row" data-person="gabriel" data-tier="8">
+                    <div class="tier-label">8</div>
+                    <div class="tier-items"></div>
+                </div>
+                <div class="tier-row" data-person="gabriel" data-tier="7">
+                    <div class="tier-label">7</div>
+                    <div class="tier-items"></div>
+                </div>
+                <div class="tier-row" data-person="gabriel" data-tier="6">
+                    <div class="tier-label">6</div>
+                    <div class="tier-items"></div>
+                </div>
+                <div class="tier-row" data-person="gabriel" data-tier="5">
+                    <div class="tier-label">5</div>
+                    <div class="tier-items"></div>
+                </div>
+                <div class="tier-row" data-person="gabriel" data-tier="4">
+                    <div class="tier-label">4</div>
+                    <div class="tier-items"></div>
+                </div>
+                <div class="tier-row" data-person="gabriel" data-tier="3">
+                    <div class="tier-label">3</div>
+                    <div class="tier-items"></div>
+                </div>
+                <div class="tier-row" data-person="gabriel" data-tier="2">
+                    <div class="tier-label">2</div>
+                    <div class="tier-items"></div>
+                </div>
+                <div class="tier-row" data-person="gabriel" data-tier="1">
+                    <div class="tier-label">1</div>
+                    <div class="tier-items"></div>
+                </div>
+                <div class="tier-row" data-person="gabriel" data-tier="0">
+                    <div class="tier-label">0</div>
+                    <div class="tier-items"></div>
+                </div>
+            </div>
+
+            <div class="person-card">
+                <h2>Anne</h2>
+                <div class="tier-row" data-person="anne" data-tier="12">
+                    <div class="tier-label">Obra Prima</div>
+                    <div class="tier-items"></div>
+                </div>
+                <div class="tier-row" data-person="anne" data-tier="11">
+                    <div class="tier-label">Incrível</div>
+                    <div class="tier-items"></div>
+                </div>
+                <div class="tier-row" data-person="anne" data-tier="10">
+                    <div class="tier-label">Muito Bom</div>
+                    <div class="tier-items"></div>
+                </div>
+                <div class="tier-row" data-person="anne" data-tier="9">
+                    <div class="tier-label">Bom</div>
+                    <div class="tier-items"></div>
+                </div>
+                <div class="tier-row" data-person="anne" data-tier="8">
+                    <div class="tier-label">Massa Vei</div>
+                    <div class="tier-items"></div>
+                </div>
+                <div class="tier-row" data-person="anne" data-tier="7">
+                    <div class="tier-label">Divertente</div>
+                    <div class="tier-items"></div>
+                </div>
+                <div class="tier-row" data-person="anne" data-tier="6">
+                    <div class="tier-label">Legal</div>
+                    <div class="tier-items"></div>
+                </div>
+                <div class="tier-row" data-person="anne" data-tier="5">
+                    <div class="tier-label">Assistível</div>
+                    <div class="tier-items"></div>
+                </div>
+                <div class="tier-row" data-person="anne" data-tier="4">
+                    <div class="tier-label">É</div>
+                    <div class="tier-items"></div>
+                </div>
+                <div class="tier-row" data-person="anne" data-tier="3">
+                    <div class="tier-label">Péssimo</div>
+                    <div class="tier-items"></div>
+                </div>
+                <div class="tier-row" data-person="anne" data-tier="2">
+                    <div class="tier-label">Esculhambação</div>
+                    <div class="tier-items"></div>
+                </div>
+                <div class="tier-row" data-person="anne" data-tier="1">
+                    <div class="tier-label">Lixo</div>
+                    <div class="tier-items"></div>
+                </div>
+                <div class="tier-row" data-person="anne" data-tier="0">
+                    <div class="tier-label">Menos que Lixo</div>
+                    <div class="tier-items"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
