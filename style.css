@@ -274,6 +274,10 @@ h1 {
     font-style: italic;
 }
 
+audio {
+    display: none;
+}
+
 @media (max-width: 900px) {
     .tier-list {
         grid-template-columns: 1fr;
