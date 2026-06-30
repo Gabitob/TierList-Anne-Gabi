@@ -15,10 +15,18 @@
                 <input type="file" id="imageInput" accept="image/*" multiple>
                 Adicionar imagens
             </label>
-            <div class="action-buttons">
-                <button id="saveStateButton" type="button" class="action-btn">Salvar Tierlist</button>
-                <button id="loadStateButton" type="button" class="action-btn">Carregar Tierlist</button>
-                <input type="file" id="stateInput" accept="application/json" hidden>
+            <div class="controls-stack">
+                <div class="music-control">
+                    <button id="musicToggleButton" type="button" class="music-toggle-btn" aria-pressed="false">
+                        <span class="music-toggle-icon">♫</span>
+                        <span class="music-toggle-text">Música</span>
+                    </button>
+                </div>
+                <div class="action-buttons">
+                    <button id="saveStateButton" type="button" class="action-btn">Salvar Tierlist</button>
+                    <button id="loadStateButton" type="button" class="action-btn">Carregar Tierlist</button>
+                    <input type="file" id="stateInput" accept="application/json" hidden>
+                </div>
             </div>
         </section>
 
@@ -142,6 +150,7 @@
         </section>
     </div>
 
+    <audio id="backgroundMusic" preload="auto"></audio>
     <script src="script.js"></script>
 </body>
 </html>

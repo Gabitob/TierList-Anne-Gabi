@@ -1,8 +1,45 @@
 const availableImagesGabriel = document.getElementById('availableImagesGabriel');
 const availableImagesAnne = document.getElementById('availableImagesAnne');
 const imageInput = document.getElementById('imageInput');
+const musicToggleButton = document.getElementById('musicToggleButton');
+const backgroundMusic = document.getElementById('backgroundMusic');
 let draggedCardId = null;
 let draggedCardPerson = null;
+
+const musicTrack = 'music/Móveis Coloniais de Acaju e Leoni-Dois Sorrisos(64 Kbps).mp3';
+backgroundMusic.src = encodeURI(musicTrack);
+backgroundMusic.loop = true;
+backgroundMusic.volume = 0.25;
+
+function updateMusicButton(isPlaying) {
+    musicToggleButton.classList.toggle('active', isPlaying);
+    musicToggleButton.setAttribute('aria-pressed', String(isPlaying));
+    const label = musicToggleButton.querySelector('.music-toggle-text');
+    if (label) {
+        label.textContent = isPlaying ? 'Música ligada' : 'Música';
+    }
+}
+
+async function toggleBackgroundMusic() {
+    if (backgroundMusic.paused) {
+        try {
+            await backgroundMusic.play();
+            updateMusicButton(true);
+        } catch (error) {
+            console.error('Não foi possível iniciar a música:', error);
+            updateMusicButton(false);
+        }
+    } else {
+        backgroundMusic.pause();
+        updateMusicButton(false);
+    }
+}
+
+musicToggleButton.addEventListener('click', () => {
+    toggleBackgroundMusic();
+});
+
+updateMusicButton(false);
 
 function createImageCard({ src, label, person, groupId, id }) {
     const card = document.createElement('div');
